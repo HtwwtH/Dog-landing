@@ -247,4 +247,81 @@ p {
 .amatic {
   font-family: "Amatic SC", cursive;
 }
+
+.story {
+  width: 1440px;
+  margin: 0 auto;
+  max-height: 500px;
+  padding: 149px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.story__column1 {
+  width: 38%;
+  position: relative;
+}
+
+.story__column2 {
+  width: 30%;
+}
+
+.story__column3 {
+  text-align: center;
+  width: 32%;
+}
+
+.column1-title {
+  position: absolute;
+  left: 209px;
+}
+
+.column1-title__our {
+  color: #452a31;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 46px;
+  margin-bottom: 19px;
+}
+
+.column1-title__story {
+  color: #2ea2d0;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.column1-images__pug {
+  height: 527px;
+  position: absolute;
+  top: -75px;
+}
+
+.column1-images__vector {
+  height: 179px;
+  position: absolute;
+  top: 400px;
+  left: 53px;
+}
+
+.column2__text {
+  color: #3d3d3d;
+  font-size: 21px;
+  line-height: 33px;
+  margin-bottom: 40px;
+}
+
+.column2__read {
+  text-transform: uppercase;
+  color: #2ea2d0;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 33px;
+  letter-spacing: 3px;
+}
+
+.column3__food {
+  height: 314px;
+}
 /*# sourceMappingURL=style.css.map */

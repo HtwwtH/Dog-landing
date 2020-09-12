@@ -108,7 +108,6 @@ p {
   }
 }
 
-.logo {}
 
 .link {
   font-size: 17px;
@@ -121,4 +120,92 @@ p {
 // Шрифт amaticSC для слоганов
 .amatic {
   font-family: "Amatic SC", cursive;
+}
+
+.story {
+  width: 1440px;
+  margin: 0 auto;
+  max-height: 500px;
+  padding: 149px 0 40px;
+  display: flex;
+
+  &__column1 {
+    width: 38%;
+    position: relative;
+  }
+
+  &__column2 {
+    width: 30%;
+  }
+
+  &__column3 {
+    text-align: center;
+    width: 32%;
+  }
+}
+
+.column1-title {
+
+  position: absolute;
+  left: 209px;
+
+  &__our {
+
+    color: #452a31;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom: 19px;
+  }
+
+  &__story {
+    color: #2ea2d0;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 46px;
+  }
+}
+
+.column1-images {
+
+  &__pug {
+    height: 527px;
+    position: absolute;
+    top: -75px;
+  }
+
+  &__vector {
+    height: 179px;
+    position: absolute;
+    top: 400px;
+    left: 53px;
+  }
+}
+
+.column2 {
+
+  &__text {
+
+    color: #3d3d3d;
+    font-size: 21px;
+    line-height: 33px;
+    margin-bottom: 40px;
+  }
+
+  &__read {
+    text-transform: uppercase;
+    color: #2ea2d0;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 33px;
+    letter-spacing: 3px;
+  }
+}
+
+.column3 {
+
+
+  &__food {
+    height: 314px;
+  }
 }
