@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: #452a31;
+}
+
+.about {
+  width: 1440px;
+  margin: 0 auto;
+  background-image: url(../img/about/bg1.png);
+  background-repeat: no-repeat;
+  min-height: 657px;
+}
+
+.about__container {
+  max-width: 1292px;
+  margin: 0 auto;
+}
+
+.about__header {
+  margin-bottom: 70px;
+}
+
+.about__logo {
+  margin: 36px 180px 0 0;
+}
+
+.about__text {
+  color: #452a31;
+  font-size: 41px;
+  font-weight: bold;
+  line-height: 45px;
+  margin-left: 480px;
+  margin-bottom: 122px;
+}
+
+.about__text b {
+  color: #0072a8;
+}
+
+.about__slogan {
+  max-width: 290px;
+  font-size: 66px;
+  color: #0072a8;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: 470px;
+  text-align: center;
+}
+
+.menu-about {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+}
+
+.menu-about__link {
+  width: 25%;
+  margin-right: 55px;
+  color: #ffffff;
+}
+
+.menu-about__link:last-child {
+  margin-right: 0;
+}
+
+.about-images {
+  position: relative;
+  top: -515px;
+  left: -80px;
+}
+
+.about-images__food {
+  position: absolute;
+  top: 246px;
+  left: 0;
+  height: 472px;
+}
+
+.about-images__cloud {
+  position: absolute;
+  top: 260px;
+  left: 480px;
+  width: 441px;
+}
+
+.about-images__cloud-partickles {
+  position: absolute;
+  top: 315px;
+  left: 430px;
+  width: 566px;
+}
+
+.about-images__dog {
+  position: absolute;
+  top: 165px;
+  left: 993px;
+  height: 490px;
+}
+
+.link {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.amatic {
+  font-family: "Amatic SC", cursive;
+}
+/*# sourceMappingURL=style.css.map */
