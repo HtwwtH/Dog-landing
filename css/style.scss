@@ -1,22 +1,46 @@
 @import "reset.scss";
+@import "colors";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 body {
   font-family: "Montserrat", sans-serif;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
 }
 
+h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 66px;
+  color: $blue;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h2 {
+  font-family: "Amatic SC", cursive;
+  color: $brown;
+  font-size: 41px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
 p {
-  color: #452a31;
+  color: $dark-brown;
+  font-size: 21px;
+  line-height: 33px;
+}
+
+button {
+  border: 0;
 }
 
 .about {
-  width: 1440px;
-  margin: 0 auto;
+
   background-image: url(../img/about/bg1.png);
   background-repeat: no-repeat;
   min-height: 657px;
@@ -35,24 +59,18 @@ p {
   }
 
   &__text {
-    color: #452a31;
-    font-size: 41px;
-    font-weight: bold;
-    line-height: 45px;
+
     margin-left: 480px;
     margin-bottom: 122px;
 
     b {
-      color: #0072a8;
+      color: $blue;
     }
   }
 
   &__slogan {
     max-width: 290px;
-    font-size: 66px;
-    color: #0072a8;
-    font-weight: bold;
-    line-height: 1;
+
     margin-left: 470px;
     text-align: center;
   }
@@ -66,7 +84,7 @@ p {
   &__link {
     width: 25%;
     margin-right: 55px;
-    color: #ffffff;
+    color: #fff;
   }
 
   &__link:last-child {
@@ -117,14 +135,7 @@ p {
   text-transform: uppercase;
 }
 
-// Шрифт amaticSC для слоганов
-.amatic {
-  font-family: "Amatic SC", cursive;
-}
-
 .story {
-  width: 1440px;
-  margin: 0 auto;
   max-height: 500px;
   padding: 149px 0 40px;
   display: flex;
@@ -151,7 +162,7 @@ p {
 
   &__our {
 
-    color: #452a31;
+    color: $brown;
     font-size: 42px;
     font-weight: 700;
     line-height: 46px;
@@ -159,7 +170,7 @@ p {
   }
 
   &__story {
-    color: #2ea2d0;
+    color: $blue;
     font-size: 100px;
     font-weight: 700;
     line-height: 46px;
@@ -185,10 +196,6 @@ p {
 .column2 {
 
   &__text {
-
-    color: #3d3d3d;
-    font-size: 21px;
-    line-height: 33px;
     margin-bottom: 40px;
   }
 
@@ -203,9 +210,82 @@ p {
 }
 
 .column3 {
-
-
   &__food {
     height: 314px;
+  }
+}
+
+.ingredient {
+  background-image: url(../img/ingredient/bg.png);
+  background-repeat: no-repeat;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &__container {
+    width: 836px;
+  }
+
+  &__h2 {
+    color: white;
+    font-size: 33px;
+    letter-spacing: 7px;
+    margin-top: 77px;
+  }
+
+  &__h1 {
+    color: white;
+    font-size: 62px;
+    margin-bottom: 40px;
+  }
+
+  &__p {
+    color: white;
+  }
+}
+
+.description {
+  position: relative;
+  display: flex;
+
+  &__info {
+    padding: 182px 0 207px 266px;
+    width: 651px;
+  }
+
+  &__h2 {
+    font-size: 54px;
+    margin-bottom: 35px;
+  }
+
+  &__p {
+    color: black;
+    margin-bottom: 45px;
+  }
+
+  &__learn-more {}
+}
+
+.learn-more {
+  height: 54px;
+  color: white;
+  background-color: $light-blue;
+}
+
+.description-images {
+  display: flex;
+  margin-top: 90px;
+
+  &__bulldog {
+    // position: absolute;
+    // top: 90px;
+    height: 425px;
+  }
+
+  &__vector {
+    position: absolute;
+    right: 150px;
+    height: 177px;
   }
 }
