@@ -1,12 +1,11 @@
 @import "reset.scss";
 @import "colors";
+@import "mixin";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
 body {
   font-family: "Montserrat", sans-serif;
-  width: 1440px;
-  margin: 0 auto;
 }
 
 a {
@@ -27,6 +26,16 @@ h2 {
   font-size: 41px;
   font-weight: bold;
   line-height: 45px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Amatic SC", cursive;
+  color: $brown;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 45px;
+  text-transform: uppercase;
 }
 
 p {
@@ -39,27 +48,39 @@ button {
   border: 0;
 }
 
-.about {
+section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
+.wrapper {
+  max-width: 1292px;
+  margin: 0 auto;
+}
+
+.about {
   background-image: url(../img/about/bg1.png);
   background-repeat: no-repeat;
   min-height: 657px;
-
-  &__container {
-    max-width: 1292px;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 
   &__header {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 70px;
   }
 
+  &__menu {
+    color: #fff;
+    margin-top: 20px;
+  }
+
   &__logo {
-    margin: 36px 180px 0 0;
+    margin-top: 36px;
+    margin-right: 100px;
   }
 
   &__text {
-
     margin-left: 480px;
     margin-bottom: 122px;
 
@@ -76,19 +97,35 @@ button {
   }
 }
 
-.menu-about {
-  display: inline-block;
-  position: relative;
-  top: -20px;
+.menu {
+  display: flex;
+  align-items: center;
 
   &__link {
-    width: 25%;
-    margin-right: 55px;
-    color: #fff;
+    display: block;
+    margin-right: 35px;
+    color: inherit;
+
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
-  &__link:last-child {
-    margin-right: 0;
+
+  &__link:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: $gray;
+    transition: width .3s ease-in-out;
+  }
+
+  &__link:hover:after,
+  &__link:focus:after {
+    width: 100%;
   }
 }
 
@@ -120,19 +157,10 @@ button {
 
   &__dog {
     position: absolute;
-    top: 165px;
+    top: 168px;
     left: 993px;
     height: 490px;
   }
-}
-
-
-.link {
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 4px;
-  line-height: 1;
-  text-transform: uppercase;
 }
 
 .story {
@@ -156,12 +184,10 @@ button {
 }
 
 .column1-title {
-
   position: absolute;
   left: 209px;
 
   &__our {
-
     color: $brown;
     font-size: 42px;
     font-weight: 700;
@@ -178,7 +204,6 @@ button {
 }
 
 .column1-images {
-
   &__pug {
     height: 527px;
     position: absolute;
@@ -194,7 +219,6 @@ button {
 }
 
 .column2 {
-
   &__text {
     margin-bottom: 40px;
   }
@@ -227,14 +251,14 @@ button {
     width: 836px;
   }
 
-  &__h2 {
+  &__subtitle {
     color: white;
     font-size: 33px;
     letter-spacing: 7px;
     margin-top: 77px;
   }
 
-  &__h1 {
+  &__title {
     color: white;
     font-size: 62px;
     margin-bottom: 40px;
@@ -254,23 +278,30 @@ button {
     width: 651px;
   }
 
-  &__h2 {
+  &__subtitle {
     font-size: 54px;
     margin-bottom: 35px;
   }
 
-  &__p {
+  &__text {
     color: black;
     margin-bottom: 45px;
   }
-
-  &__learn-more {}
 }
 
-.learn-more {
+.button-style {
+  padding: 20px 24px;
   height: 54px;
   color: white;
+  background-color: $pre-light-blue;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: background-color .3s ease-in-out;
+}
+
+.button-style:hover {
   background-color: $light-blue;
+  transition: background-color .3s ease-in-out;
 }
 
 .description-images {
@@ -278,8 +309,6 @@ button {
   margin-top: 90px;
 
   &__bulldog {
-    // position: absolute;
-    // top: 90px;
     height: 425px;
   }
 
@@ -289,3 +318,144 @@ button {
     height: 177px;
   }
 }
+
+.for-owners {
+  max-height: 366px;
+  background-color: $gray;
+  padding: 100px 0 64px;
+}
+
+.owners-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.owners-box {
+  width: 50%;
+  max-width: 400px;
+  margin-left: 62px;
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__search {
+    position: relative;
+    max-width: 270px;
+    margin-bottom: 35px;
+  }
+
+  .search {
+    &__input {
+      width: 100%;
+      height: 42px;
+      border: none;
+      border-bottom: 1px solid #000;
+      background: transparent;
+
+      color: $dark-brown;
+      font-size: 21px;
+    }
+
+    &__button {
+      width: 42px;
+      height: 42px;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__button:before {
+      content: "\f002";
+      font-family: FontAwesome;
+      font-size: 16px;
+      color: $light-gray;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 35px;
+  }
+}
+
+.for-owners-images {
+  position: relative;
+
+  &__dog {
+    height: 545px;
+    position: absolute;
+    top: -400px;
+    left: 550px;
+  }
+}
+
+.food {
+  position: relative;
+  min-height: 538px;
+
+  &__image {
+    position: absolute;
+    top: 100px;
+    left: 230px;
+    height: 314px;
+  }
+
+  &__container {
+    width: 538px;
+    padding-top: 167px;
+    padding-left: 607px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 35px;
+    margin-bottom: 26px;
+  }
+
+  &__button {}
+}
+
+.footer {
+  &__container {
+    position: relative;
+    width: 1325px;
+    height: 525px;
+    background-image: url(../img/footer/pug.png);
+    background-repeat: no-repeat;
+    min-height: 522px;
+    margin: 0 auto 65px;
+  }
+
+  &__cloud-image {
+    position: absolute;
+    left: 593px;
+    top: 20px;
+    height: 363px;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 683px;
+    top: 178px;
+    height: 56px;
+  }
+
+  &__rights {
+    padding-left: 670px;
+    padding-top: 480px;
+    font-size: 16px;
+  }
+
+  &__social {}
+}
+
+.social-link {}

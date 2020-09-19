@@ -1,0 +1,19 @@
+@mixin place($color, $font-style, $bg) {
+  -webkit-input-placeholder: {
+    color: $color;
+    font-style: $font-style;
+    background: $bg;
+  }
+
+  -moz-placeholder: {
+    color: $color;
+    font-style: $font-style;
+    background: $bg;
+  }
+
+  -ms-input-placeholder: {
+    color: $color;
+    font-style: $font-style;
+    background: $bg;
+  }
+}
