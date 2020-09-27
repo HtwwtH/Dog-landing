@@ -7,6 +7,9 @@
   <title>Dog Landing</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="all" href="css/animate.css">
+
+
 </head>
 
 <body>
@@ -42,11 +45,11 @@
       </div>
       <h1 class="about__slogan">100% Organic<br />Pet Food</h1>
       <div class="about-images">
-        <img class="about-images__food" src="img/logo/food.png" alt="Image: food"></img>
+        <img class="about-images__food bounceInLeft wow" src="img/logo/food.png" alt="Image: food"></img>
         <img class="about-images__cloud" src="img/about/cloud.png" alt="Image: cloud"></img>
         <img class="about-images__cloud-partickles" src="img/about/cloud_partickles.png"
           alt="Image: cloud_partickles"></img>
-        <img class="about-images__dog" src="img/about/dog.png" alt="Image: dog"></img>
+        <img class="about-images__dog fadeInRight wow" src="img/about/dog.png" alt="Image: dog"></img>
       </div>
     </div>
   </section>
@@ -56,10 +59,10 @@
   <section class="story" id="story">
     <div class="story__column1">
       <div class="column1-title">
-        <p class="column1-title__our">OUR</p>
-        <p class="column1-title__story">Story</p>
+        <p class="column1-title__our fadeInLeft wow">OUR</p>
+        <p class="column1-title__story fadeInLeft wow">Story</p>
       </div>
-      <div class="column1-images">
+      <div class="column1-images fadeInLeft wow">
         <img class="column1-images__pug" src="img/story/pug.png" alt="Image: pug"></img>
         <img class="column1-images__vector" src="img/story/vector.png" alt="Image: vector"></img>
       </div>
@@ -71,13 +74,13 @@
       <a href="#" class="column2__read">Read More</a>
     </div>
     <div class="story__column3">
-      <img class="column3__food" src="img/logo/food.png" alt="Image: food"></img>
+      <img class="column3__food bounceInRight wow" data-wow-delay=".3s" src="img/logo/food.png" alt="Image: food"></img>
   </section>
   <!-- Конец второго блока story -->
 
   <!-- 3й блок ingredient -->
   <section class="ingredient">
-    <div class="ingredient__container">
+    <div class="ingredient__container fadeIn wow" data-wow-delay=".3s">
       <h2 class="ingredient__subtitle">Our no. 1 ingredient:</h2>
       <h1 class="ingredient__title">Real Chicken & Egg</h1>
       <p class="ingredient__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -98,7 +101,8 @@
       <button class="description__learn-more button-style">LEARN MORE</button>
     </div>
     <div class="description-images">
-      <img class="description-images__bulldog" src="img/description/bulldog.png" alt="Image: bulldog"></img>
+      <img class="description-images__bulldog fadeInRight wow" data-wow-delay=".3s" src="img/description/bulldog.png"
+        alt="Image: bulldog"></img>
       <img class="description-images__vector" src="img/description/vector.png" alt="Image: vector"></img>
     </div>
   </section>
@@ -124,7 +128,8 @@
 
       </div>
       <div class="for-owners-images">
-        <img class="for-owners-images__dog" src="img/for-owners/dog.png" alt="Image: dog"></img>
+        <img class="for-owners-images__dog fadeInLeft wow" data-wow-delay=".3s" src="img/for-owners/dog.png"
+          alt="Image: dog"></img>
       </div>
     </div>
   </section>
@@ -133,7 +138,7 @@
 
   <!-- 6й блок food -->
   <section class="food">
-    <img class="food__image" src="img/logo/food.png" alt="Image: food"></img>
+    <img class="food__image bounceInLeft wow" data-wow-delay=".3s" src="img/logo/food.png" alt="Image: food"></img>
     <div class="food__container">
       <h3 class="food__subtitle">Find the right food for your dog</h3>
       <p class="food__text">Each formula has been created to deliver nutrition tailored to your dog's health needs
@@ -166,6 +171,8 @@
   <!-- Конец 7го блока footer -->
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/mobile_menu.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>new WOW().init();</script>
 </body>
 
 </html>
