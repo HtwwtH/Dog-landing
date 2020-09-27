@@ -63,6 +63,8 @@ section {
   margin: 0 auto;
 }
 
+// Первый блок about
+
 .about {
   background-image: url(../img/about/bg1.png);
   background-repeat: no-repeat;
@@ -187,7 +189,9 @@ section {
     height: 490px;
   }
 }
+// Конец первого блока about
 
+// Второй блок story
 .story {
   max-height: 500px;
   padding: 149px 0 40px;
@@ -263,7 +267,9 @@ section {
     height: 314px;
   }
 }
+// Конец второго блока story
 
+// 3й блок ingredient
 .ingredient {
   background-image: url(../img/ingredient/bg.png);
   background-repeat: no-repeat;
@@ -293,7 +299,9 @@ section {
     color: white;
   }
 }
+// Конец 3го блока ingredient
 
+// 4й блок description 
 .description {
   position: relative;
   display: flex;
@@ -344,7 +352,9 @@ section {
     height: 177px;
   }
 }
+// Конец 4го блока description
 
+// 5й блок breed
 .for-owners {
   max-height: 366px;
   background-color: $gray;
@@ -418,7 +428,9 @@ section {
     left: 550px;
   }
 }
+// Конец 5го блока breed
 
+// 6й блок food
 .food {
   position: relative;
   min-height: 538px;
@@ -447,10 +459,10 @@ section {
     margin-bottom: 35px;
     margin-bottom: 26px;
   }
-
-  &__button {}
 }
+// Конец 6го блока food
 
+// 7й блок footer
 .footer {
   &__container {
     position: relative;
@@ -488,6 +500,7 @@ section {
 }
 
 .social-link {}
+// Конец 7го блока footer
 
 // МЕДИА ЗАПРОСЫ
 
