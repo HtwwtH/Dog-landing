@@ -11,7 +11,7 @@
 
 <body>
   <!-- Первый блок about -->
-  
+
   <section class="about">
     <div class="wrapper">
       <div class="about__header">
@@ -19,8 +19,21 @@
         <nav class="about__menu menu">
           <a href="#" class="menu__link">SHOP FOR DOG</a>
           <a href="#" class="menu__link">SHOP FOR CAT</a>
-          <a href="#" class="menu__link">OUR STORY</a>
-          <a href="#" class="menu__link">CONTACT US</a>
+          <a href="#story" class="menu__link">OUR STORY</a>
+          <a href="#contact" class="menu__link">CONTACT US</a>
+        </nav>
+        <div class="about__mobile-buttons">
+          <button class="about__m-menu-button">
+            <span class="about__menu-icon">&#9776;</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <nav class="about__menu mobile-menu">
+          <a href="#" class="menu__link">SHOP FOR DOG</a>
+          <a href="#" class="menu__link">SHOP FOR CAT</a>
+          <a href="#story" class="menu__link">OUR STORY</a>
+          <a href="#contact" class="menu__link">CONTACT US</a>
         </nav>
       </div>
       <div class="about__text">
@@ -40,7 +53,7 @@
   <!-- Конец первого блока about -->
 
   <!-- Второй блок story -->
-  <section class="story">
+  <section class="story" id="story">
     <div class="story__column1">
       <div class="column1-title">
         <p class="column1-title__our">OUR</p>
@@ -55,10 +68,10 @@
       <p class="column2__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Quis ipsum su spendisse ultrices gravida. Risus commodo viverra
         maec enas accumsan lacus vel facilisis. </p>
-      <p class="column2__read">Read More</p>
+      <a href="#" class="column2__read">Read More</a>
     </div>
     <div class="story__column3">
-    <img class="column3__food" src="img/logo/food.png" alt="Image: food"></img>
+      <img class="column3__food" src="img/logo/food.png" alt="Image: food"></img>
   </section>
   <!-- Конец второго блока story -->
 
@@ -108,7 +121,7 @@
           <p class="owners-box__text">There are many things you need to know before getting a dog.</p>
           <button class="owners-box__learn-more button-style">LEARN MORE</button>
         </div>
-        
+
       </div>
       <div class="for-owners-images">
         <img class="for-owners-images__dog" src="img/for-owners/dog.png" alt="Image: dog"></img>
@@ -123,20 +136,21 @@
     <img class="food__image" src="img/logo/food.png" alt="Image: food"></img>
     <div class="food__container">
       <h3 class="food__subtitle">Find the right food for your dog</h3>
-      <p class="food__text">Each formula has been created to deliver nutrition tailored to your dog's health needs whatever their size, breed, age,
-      or lifestyle. </p>
+      <p class="food__text">Each formula has been created to deliver nutrition tailored to your dog's health needs
+        whatever their size, breed, age,
+        or lifestyle. </p>
       <button class="food__button button-style">VIEW ALL PRODUCTS</button>
     </div>
   </section>
   <!-- Конец 6го блока food -->
 
   <!-- 7й блок food -->
-  <section class="footer">
+  <section class="footer" id="contact">
     <div class="footer__container">
       <img class="footer__cloud-image" src="img/footer/cloud.png" alt="Image: cloud"></img>
 
       <img class="footer__logo" src="img/logo/logo2.png" alt="Logo: company_logo" />
-      
+
       <p class="footer__rights">@ Company Name 2020. All rights reserved.</p>
 
       <div class="footer__social">
@@ -145,12 +159,13 @@
         <a href="" class="social-link"></a>
         <a href="" class="social-link"></a>
       </div>
-      
-      
+
+
     </div>
   </section>
   <!-- Конец 7го блока food -->
-  
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/mobile_menu.js"></script>
 </body>
 
 </html>

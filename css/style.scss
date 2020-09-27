@@ -4,8 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 
+html{
+  overflow-x:  hidden;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+  min-width: 320px;
 }
 
 a {
@@ -75,6 +80,23 @@ section {
     margin-top: 20px;
   }
 
+  &__mobile-buttons{
+    display: none;
+    margin-top: 40px;
+  }
+
+  &__m-menu-button {
+  background-color:  #b9dbec;
+  border: none;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+  &__menu-icon {
+  color: #fff;
+  font-size: 40px;
+}
+
   &__logo {
     margin-top: 36px;
     margin-right: 100px;
@@ -112,15 +134,13 @@ section {
     line-height: 1;
     text-transform: uppercase;
   }
-
-
-  &__link:after {
+    &__link:after {
     display: block;
     content: "";
     height: 2px;
     width: 0%;
     background-color: $gray;
-    transition: width .3s ease-in-out;
+    @include transition(width .3s ease-in-out);
   }
 
   &__link:hover:after,
@@ -128,6 +148,11 @@ section {
     width: 100%;
   }
 }
+
+.mobile-menu{
+  display: none;
+}
+
 
 .about-images {
   position: relative;
@@ -296,12 +321,13 @@ section {
   background-color: $pre-light-blue;
   letter-spacing: 1px;
   font-weight: 600;
-  transition: background-color .3s ease-in-out;
+  @include transition(background-color .3s ease-in-out);
 }
 
 .button-style:hover {
+  cursor: pointer;
   background-color: $light-blue;
-  transition: background-color .3s ease-in-out;
+  @include transition(background-color .3s ease-in-out);
 }
 
 .description-images {
@@ -314,7 +340,7 @@ section {
 
   &__vector {
     position: absolute;
-    right: 150px;
+    left: 1200px;
     height: 177px;
   }
 }
@@ -405,7 +431,8 @@ section {
   }
 
   &__container {
-    width: 538px;
+    max-width: 538px;
+    margin-right: 20px;
     padding-top: 167px;
     padding-left: 607px;
   }
@@ -427,12 +454,12 @@ section {
 .footer {
   &__container {
     position: relative;
-    width: 1325px;
-    height: 525px;
+    max-width: 1325px;
+    max-height: 525px;
     background-image: url(../img/footer/pug.png);
     background-repeat: no-repeat;
     min-height: 522px;
-    margin: 0 auto 65px;
+    margin: 0 auto;
   }
 
   &__cloud-image {
@@ -455,7 +482,402 @@ section {
     font-size: 16px;
   }
 
+  // ДЛЯ ИКОНОК СОЦИАЛЬНЫХ СЕТЕЙ
+
   &__social {}
 }
 
 .social-link {}
+
+// МЕДИА ЗАПРОСЫ
+
+@media (max-width: 1330px){
+    .about-images__dog {
+      top: 308px;
+      height: 350px;
+  }
+    .column1-title__story {
+        font-size: 80px;
+    }
+    .description-images__vector {
+      display: none;
+  }
+    .for-owners-images__dog {
+      left: 500px;
+  }
+}
+
+@media (max-width: 1200px){
+    .about-images__dog {
+      display: none;
+  }
+    .column1-title{
+      &__our {
+      margin-bottom: 0;
+  }
+      &__story {
+        font-size: 60px;
+    }
+    }
+
+    .column1-images{
+      &__pug {
+      height: 427px;
+  }
+      &__vector {
+          display: none;
+      }
+    }
+    
+    .description__info {
+      padding: 100px 0 100px 200px;
+  }
+    .description-images__bulldog {
+      height: 325px;
+  }
+    .for-owners-images__dog {
+      display: none;
+  }
+    .owners-block {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 1024px){
+  .about-images__cloud-partickles {
+    display: none;
+}
+  .column1-title {
+    position: absolute;
+    left: 120px;
+}
+  .column1-images__pug {
+    height: 400px;
+    position: absolute;
+    top: 10px;
+}
+  .food {
+    min-height: 500px;
+}
+  .food {
+    &____image{
+      left: 130px;
+    }
+    &__container {
+    margin-right: 20px;
+    padding-top: 120px;
+    padding-left: 500px;
+    }
+}
+  
+  .footer{
+    &__logo {
+    position: absolute;
+    left: 620px;
+    top: 220px;
+    height: 50px;
+    }
+
+    &__cloud-image {
+      left: 570px;
+      top: 110px;
+      height: 263px;
+    }
+
+    &__rights {
+      padding-left: 500px;
+    }
+  }
+}
+
+
+@media (max-width: 900px){
+  .about {
+    background-image: none;
+    background-color: #9fcce2;
+    margin: 0 auto;
+  }
+
+// ПЕРВЫЙ ВЕРХНИЙ БЛОК "ABOUT" - ПОЯВЛЕНИЕ МЕНЮ-БУРГЕРА
+
+  .about{
+    &__header{
+    margin-bottom: 0;
+    }
+    &__menu{
+      display: none;
+    }
+    &__mobile-buttons {
+    display: block;
+    margin-left: auto;
+    }
+
+     &__text{
+    text-align: right;
+    margin: 250px 100px 0 0;
+    }
+
+    &__slogan {
+      margin-left: 0;
+      margin-right: 100px;
+      text-align: right;
+      max-width: none;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    right: 60px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    background: #9fcce2;
+  }
+
+  .active {     // АКТИВНОСТЬ МОБИЛЬНОГО МЕНЮ
+    display: flex;
+  }
+
+  .about-images{
+    position: unset;
+    &__food {
+      height: 372px;
+    }
+    &__cloud{
+      display: none;
+    }
+  }
+
+  .story{
+    &__column1{
+      width: 48%;
+    }
+    &__column2{
+      width: 50%;
+    }
+    &__column3 {
+    display: none;
+  }
+}
+
+  .footer{
+    &__container {
+    background-image: none;
+    background: #eeeef0;
+    min-height: 200px;
+    height: 200px;
+    margin: 0 auto;
+    }
+
+    &__cloud-image{
+    display: none;
+    }
+
+    &__logo{
+      top: 20px;
+      left: 20px;
+    }
+
+    &__rights {
+      padding-left: 300px;
+      padding-top: 150px;
+    }
+  } 
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    height: 150px;
+    right: 10px;
+  }
+
+  .about{
+    &__m-menu-button {
+      margin-right: 50px;
+    }
+    &__text{
+      margin: 200px 50px 0 0;
+    }
+    &__slogan {
+      margin-left: 0;
+      margin-right: 50px;
+      text-align: right;
+      max-width: none;
+    }
+  }
+
+  .about-images__food {
+      height: 300px;
+      left: -50px;
+  }
+
+  .story {
+      padding: 50px 0 40px;
+  }
+
+  .description-images__bulldog {
+      display: none;
+  }
+
+  .description__info {
+      padding: 50px 100px 50px;
+  }
+
+    .column1-title {
+      left: 60px;
+  }
+  .column1-images__pug {
+    display: none;
+  }
+
+  .food{
+    &__image {
+      display: none;
+    }
+    &__container {
+      padding-left: 50px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-menu{
+    position: unset;
+  }
+  .about{
+    &__logo{
+      margin-right: 0;
+    }
+
+    &__m-menu-button {
+    margin-right: 10px;
+    }
+
+    &__text{
+    text-align: center;
+    margin: 15px 0 10px;
+    }
+
+    &__slogan {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+
+  .about-images__food {
+    height: 250px;
+    position: unset;
+    display: block;
+    margin: 0 auto;
+}
+
+  .story{
+    max-height: unset;
+    flex-wrap: wrap;
+
+    &__column1{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    &__column2{
+      width: 100%;
+      text-align: center;
+      margin: 0 15px;
+    }
+  }
+
+  .column1-title{
+      position: unset;
+      display: block;
+      left: unset;
+    }
+
+  .ingredient__subtitle{
+    margin-top: 35px;
+  }
+
+  .description{
+    &__subtitle{
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+    &__info {
+      padding: 50px;
+      text-align: center;
+      margin-bottom: 25px;
+  }
+}
+
+  .for-owners{
+    max-height: unset;
+    padding: 50px 0 20px;
+  }
+  .owners-block{
+    flex-wrap: wrap;
+  }
+  .owners-box{
+    width: 100%;
+    max-width: none;
+    margin: 0 15px 40px;
+  }
+
+  .food {
+    min-height: unset;
+    &__container{
+      margin-right: 0;
+      padding: 50px 10px 40px;
+      text-align: center;
+    }
+}
+
+  .footer__rights {
+    padding-left: 10px;
+}
+}
+
+@media (max-width: 380px) {
+  .about h2{
+    font-size: 32px;
+  }
+  .about h1{
+      font-size: 46px;
+      margin-bottom: 20px;
+  }
+  .about__logo {
+    width: 80%;
+    margin-right: 10px;
+}
+
+  .ingredient{
+    &__container{
+      margin: 0 5px;
+    }
+    &__subtitle {
+      font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 0;
+    }
+    &__title {
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+  }
+
+  .description{
+    &__info {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  }
+}

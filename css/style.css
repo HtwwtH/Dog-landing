@@ -130,8 +130,13 @@ table {
   border-spacing: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+  min-width: 320px;
 }
 
 a {
@@ -206,6 +211,23 @@ section {
   margin-top: 20px;
 }
 
+.about__mobile-buttons {
+  display: none;
+  margin-top: 40px;
+}
+
+.about__m-menu-button {
+  background-color: #b9dbec;
+  border: none;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+.about__menu-icon {
+  color: #fff;
+  font-size: 40px;
+}
+
 .about__logo {
   margin-top: 36px;
   margin-right: 100px;
@@ -252,12 +274,16 @@ section {
   height: 2px;
   width: 0%;
   background-color: #f0f0f0;
-  -webkit-transition: width .3s ease-in-out;
-  transition: width .3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .menu__link:hover:after, .menu__link:focus:after {
   width: 100%;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .about-images {
@@ -429,14 +455,15 @@ section {
   background-color: #2ea2d0b6;
   letter-spacing: 1px;
   font-weight: 600;
-  -webkit-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .button-style:hover {
+  cursor: pointer;
   background-color: #2ea2d0;
-  -webkit-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .description-images {
@@ -452,7 +479,7 @@ section {
 
 .description-images__vector {
   position: absolute;
-  right: 150px;
+  left: 1200px;
   height: 177px;
 }
 
@@ -544,7 +571,8 @@ section {
 }
 
 .food__container {
-  width: 538px;
+  max-width: 538px;
+  margin-right: 20px;
   padding-top: 167px;
   padding-left: 607px;
 }
@@ -562,12 +590,12 @@ section {
 
 .footer__container {
   position: relative;
-  width: 1325px;
-  height: 525px;
+  max-width: 1325px;
+  max-height: 525px;
   background-image: url(../img/footer/pug.png);
   background-repeat: no-repeat;
   min-height: 522px;
-  margin: 0 auto 65px;
+  margin: 0 auto;
 }
 
 .footer__cloud-image {
@@ -588,5 +616,340 @@ section {
   padding-left: 670px;
   padding-top: 480px;
   font-size: 16px;
+}
+
+@media (max-width: 1330px) {
+  .about-images__dog {
+    top: 308px;
+    height: 350px;
+  }
+  .column1-title__story {
+    font-size: 80px;
+  }
+  .description-images__vector {
+    display: none;
+  }
+  .for-owners-images__dog {
+    left: 500px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-images__dog {
+    display: none;
+  }
+  .column1-title__our {
+    margin-bottom: 0;
+  }
+  .column1-title__story {
+    font-size: 60px;
+  }
+  .column1-images__pug {
+    height: 427px;
+  }
+  .column1-images__vector {
+    display: none;
+  }
+  .description__info {
+    padding: 100px 0 100px 200px;
+  }
+  .description-images__bulldog {
+    height: 325px;
+  }
+  .for-owners-images__dog {
+    display: none;
+  }
+  .owners-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-images__cloud-partickles {
+    display: none;
+  }
+  .column1-title {
+    position: absolute;
+    left: 120px;
+  }
+  .column1-images__pug {
+    height: 400px;
+    position: absolute;
+    top: 10px;
+  }
+  .food {
+    min-height: 500px;
+  }
+  .food____image {
+    left: 130px;
+  }
+  .food__container {
+    margin-right: 20px;
+    padding-top: 120px;
+    padding-left: 500px;
+  }
+  .footer__logo {
+    position: absolute;
+    left: 620px;
+    top: 220px;
+    height: 50px;
+  }
+  .footer__cloud-image {
+    left: 570px;
+    top: 110px;
+    height: 263px;
+  }
+  .footer__rights {
+    padding-left: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    background-image: none;
+    background-color: #9fcce2;
+    margin: 0 auto;
+  }
+  .about__header {
+    margin-bottom: 0;
+  }
+  .about__menu {
+    display: none;
+  }
+  .about__mobile-buttons {
+    display: block;
+    margin-left: auto;
+  }
+  .about__text {
+    text-align: right;
+    margin: 250px 100px 0 0;
+  }
+  .about__slogan {
+    margin-left: 0;
+    margin-right: 100px;
+    text-align: right;
+    max-width: none;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    right: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 200px;
+    background: #9fcce2;
+  }
+  .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-images {
+    position: unset;
+  }
+  .about-images__food {
+    height: 372px;
+  }
+  .about-images__cloud {
+    display: none;
+  }
+  .story__column1 {
+    width: 48%;
+  }
+  .story__column2 {
+    width: 50%;
+  }
+  .story__column3 {
+    display: none;
+  }
+  .footer__container {
+    background-image: none;
+    background: #eeeef0;
+    min-height: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .footer__cloud-image {
+    display: none;
+  }
+  .footer__logo {
+    top: 20px;
+    left: 20px;
+  }
+  .footer__rights {
+    padding-left: 300px;
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    height: 150px;
+    right: 10px;
+  }
+  .about__m-menu-button {
+    margin-right: 50px;
+  }
+  .about__text {
+    margin: 200px 50px 0 0;
+  }
+  .about__slogan {
+    margin-left: 0;
+    margin-right: 50px;
+    text-align: right;
+    max-width: none;
+  }
+  .about-images__food {
+    height: 300px;
+    left: -50px;
+  }
+  .story {
+    padding: 50px 0 40px;
+  }
+  .description-images__bulldog {
+    display: none;
+  }
+  .description__info {
+    padding: 50px 100px 50px;
+  }
+  .column1-title {
+    left: 60px;
+  }
+  .column1-images__pug {
+    display: none;
+  }
+  .food__image {
+    display: none;
+  }
+  .food__container {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobile-menu {
+    position: unset;
+  }
+  .about__logo {
+    margin-right: 0;
+  }
+  .about__m-menu-button {
+    margin-right: 10px;
+  }
+  .about__text {
+    text-align: center;
+    margin: 15px 0 10px;
+  }
+  .about__slogan {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .about-images__food {
+    height: 250px;
+    position: unset;
+    display: block;
+    margin: 0 auto;
+  }
+  .story {
+    max-height: unset;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .story__column1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .story__column2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 15px;
+  }
+  .column1-title {
+    position: unset;
+    display: block;
+    left: unset;
+  }
+  .ingredient__subtitle {
+    margin-top: 35px;
+  }
+  .description__subtitle {
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+  .description__info {
+    padding: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .for-owners {
+    max-height: unset;
+    padding: 50px 0 20px;
+  }
+  .owners-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .owners-box {
+    width: 100%;
+    max-width: none;
+    margin: 0 15px 40px;
+  }
+  .food {
+    min-height: unset;
+  }
+  .food__container {
+    margin-right: 0;
+    padding: 50px 10px 40px;
+    text-align: center;
+  }
+  .footer__rights {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .about h2 {
+    font-size: 32px;
+  }
+  .about h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  .about__logo {
+    width: 80%;
+    margin-right: 10px;
+  }
+  .ingredient__container {
+    margin: 0 5px;
+  }
+  .ingredient__subtitle {
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 0;
+  }
+  .ingredient__title {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  .description__info {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .description__text {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

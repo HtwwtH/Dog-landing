@@ -1,19 +1,6 @@
-@mixin place($color, $font-style, $bg) {
-  -webkit-input-placeholder: {
-    color: $color;
-    font-style: $font-style;
-    background: $bg;
-  }
-
-  -moz-placeholder: {
-    color: $color;
-    font-style: $font-style;
-    background: $bg;
-  }
-
-  -ms-input-placeholder: {
-    color: $color;
-    font-style: $font-style;
-    background: $bg;
-  }
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
 }
